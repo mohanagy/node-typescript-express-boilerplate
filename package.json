@@ -1,0 +1,26 @@
+{
+    "name": "node-typescript-express-boilerplate",
+    "version": "0.0.1",
+    "description": "Node.js + Typescript + Express.js Boilerplate",
+    "main": "index.ts",
+    "scripts": {
+        "test": "test"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/mohanagy/node-typescript-express-boilerplate.git"
+    },
+    "keywords": [
+        "Node.js",
+        "Express.js",
+        "Typescript",
+        "Express.js",
+        "Boilerplate"
+    ],
+    "author": "Mohammed Naji",
+    "license": "Apache-2.0",
+    "bugs": {
+        "url": "https://github.com/mohanagy/node-typescript-express-boilerplate/issues"
+    },
+    "homepage": "https://github.com/mohanagy/node-typescript-express-boilerplate#readme"
+}
