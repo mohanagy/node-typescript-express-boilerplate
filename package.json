@@ -4,7 +4,13 @@
     "description": "Node.js + Typescript + Express.js Boilerplate",
     "main": "index.ts",
     "scripts": {
-        "test": "test"
+        "test": "test",
+        "lint": "eslint . --ext .ts",
+        "fix": "eslint . --ext .ts --fix",
+        "watch": "tsc -w & node source/bin/index.ts"
+    },
+    "engines": {
+        "node": "16.13.1"
     },
     "repository": {
         "type": "git",
@@ -22,5 +28,20 @@
     "bugs": {
         "url": "https://github.com/mohanagy/node-typescript-express-boilerplate/issues"
     },
-    "homepage": "https://github.com/mohanagy/node-typescript-express-boilerplate#readme"
+    "homepage": "https://github.com/mohanagy/node-typescript-express-boilerplate#readme",
+    "devDependencies": {
+        "@babel/preset-typescript": "^7.16.7",
+        "@tsconfig/node16": "^1.0.2",
+        "@types/express": "^4.17.13",
+        "@types/node": "^17.0.23",
+        "@typescript-eslint/eslint-plugin": "^5.19.0",
+        "@typescript-eslint/parser": "^5.19.0",
+        "eslint": "^8.13.0",
+        "ts-node": "^10.7.0",
+        "tslib": "^2.3.1",
+        "typescript": "^4.6.3"
+    },
+    "dependencies": {
+        "express": "^4.17.3"
+    }
 }
