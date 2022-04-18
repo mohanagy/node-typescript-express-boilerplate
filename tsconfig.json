@@ -1,40 +1,54 @@
 {
-    // This is an alias to @tsconfig/node12: https://github.com/tsconfig/bases
-    "extends": "ts-node/node16/tsconfig.json",
-  
-    // Most ts-node options can be specified here using their programmatic names.
-    "ts-node": {
-      // It is faster to skip typechecking.
-      // Remove if you want ts-node to do typechecking.
-      "transpileOnly": true,
-  
-      "files": true,
-  
-      "compilerOptions": {
-        // compilerOptions specified here will override those declared below,
-        // but *only* in ts-node.  Useful if you want ts-node and tsc to use
-        // different options with a single tsconfig.json.
-      }
-    },
-    "compilerOptions": {
-      // typescript options here,
-        "module": "es2022",
-        "target": "es2022",
-        "lib": ["es2021", "dom"],
-        "allowSyntheticDefaultImports": true,
-        "esModuleInterop": true,
-        "strict": true,
-        "noImplicitReturns": true,
-        "noImplicitThis": true,
-        "noImplicitAny": true,
-        "strictNullChecks": true,
-        "noUnusedLocals": true,
-        "noUnusedParameters": true,
-        "noFallthroughCasesInSwitch": true,
-        "noEmit": true,
-        "noEmitOnError": true,
-        "outDir": "./build",
-        "rootDir": "./src",    
-      
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "es2022",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "noImplicitAny": true,
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "outDir": "build",
+    "baseUrl": ".",
+    "types": ["node"],
+    "lib": ["es5", "es6", "ESNext", "ES2021"],
+    "allowJs": true,
+    "strict": true,
+    "resolveJsonModule": true,
+    "typeRoots": ["source/types/*", "./node_modules/@types"],
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "paths": {
+      "@app/*": ["source/*"],
+      "@bin/*": ["source/bin"],
+      "@config/*": ["source/config/*"],
+      "@controllers/*": ["source/controllers/*"],
+      "@database/*": ["source/database/*"],
+      "@models/*": ["source/database/models/*"],
+      "@helpers/*": ["source/helpers/*"],
+      "@interfaces/*": ["source/interfaces/*"],
+      "@middleware/*": ["source/middleware/*"],
+      "@routes/*": ["source/routes/*"],
+      "@services/*": ["source/services/*"],
+      "@triggers/*": ["source/triggers/*"],
+      "@cTypes/*": ["source/types/*"],
+      "@validations/*": ["source/validations/*"],
+      "@config": ["source/config"],
+      "@controllers": ["source/controllers"],
+      "@database": ["source/database"],
+      "@models": ["source/models"],
+      "@helpers": ["source/helpers"],
+      "@interfaces": ["source/interfaces"],
+      "@middleware": ["source/middleware"],
+      "@routes": ["source/routes"],
+      "@services": ["source/services"],
+      "@triggers": ["source/triggers"],
+      "@cTypes": ["source/types"],
+      "@validations": ["source/validations"]
     }
+  },
+  "include": ["./source/**/*"],
+  "exclude": ["node_modules", "dist", ".nyc_output", ".coverage"],
+  "parserOptions": {
+    "debugLevel": true
   }
+}
