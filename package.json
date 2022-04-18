@@ -7,7 +7,12 @@
         "test": "test",
         "lint": "eslint . --ext .ts",
         "fix": "eslint . --ext .ts --fix",
-        "watch": "tsc -w & node source/bin/index.ts"
+        "watch": "tsc -w & node source/bin/index.ts",
+        "build": "npm run init && npm run tsc",
+        "start": "node build/bin/index.js",
+        "init": "npm install",
+        "tsc": "tsc",
+        "tsc-lint": "tsc --noEmit"
     },
     "engines": {
         "node": "16.13.1"
@@ -37,6 +42,7 @@
         "@typescript-eslint/eslint-plugin": "^5.19.0",
         "@typescript-eslint/parser": "^5.19.0",
         "eslint": "^8.13.0",
+        "prettier": "^2.6.2",
         "ts-node": "^10.7.0",
         "tslib": "^2.3.1",
         "typescript": "^4.6.3"
