@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
-    "target": "ES2022",
-    "module": "es2022",
+    "target": "es6",
+    "module": "commonjs",
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "noImplicitAny": true,
@@ -10,7 +10,7 @@
     "outDir": "build",
     "baseUrl": ".",
     "types": ["node"],
-    "lib": ["es5", "es6", "ESNext", "ES2021"],
+    "lib": ["es5", "es6", "ESNext", "ES2020"],
     "allowJs": true,
     "strict": true,
     "resolveJsonModule": true,
@@ -24,8 +24,8 @@
       "@controllers/*": ["source/controllers/*"],
       "@database/*": ["source/database/*"],
       "@models/*": ["source/database/models/*"],
-      "@helpers/*": ["source/helpers/*"],
-      "@interfaces/*": ["source/interfaces/*"],
+      "@helpers/*": ["source/utils/helpers/*"],
+      "@types/*": ["source/types/*"],
       "@middleware/*": ["source/middleware/*"],
       "@routes/*": ["source/routes/*"],
       "@services/*": ["source/services/*"],
@@ -36,8 +36,10 @@
       "@controllers": ["source/controllers"],
       "@database": ["source/database"],
       "@models": ["source/models"],
-      "@helpers": ["source/helpers"],
-      "@interfaces": ["source/interfaces"],
+      "@utils": ["source/utils"],
+      "@helpers": ["source/utils/helpers"],
+      "@utils/*": ["source/utils/*"],
+      "@types": ["source/types"],
       "@middleware": ["source/middleware"],
       "@routes": ["source/routes"],
       "@services": ["source/services"],
@@ -47,7 +49,7 @@
     }
   },
   "include": ["./source/**/*"],
-  "exclude": ["node_modules", "dist", ".nyc_output", ".coverage"],
+  "exclude": ["node_modules", "build", ".nyc_output", ".coverage"],
   "parserOptions": {
     "debugLevel": true
   }

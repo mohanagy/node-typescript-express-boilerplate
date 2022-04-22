@@ -1,4 +1,9 @@
 {
+    "settings": {
+        "import/resolver": {
+            "babel-module": {}
+        }
+    },
     "env": {
         "browser": true,
         "es2021": true
@@ -17,7 +22,7 @@
         "@typescript-eslint"
     ],
     "rules": {
-        "no-console":"error",
+        "no-console": "error",
         "indent": [
             "error",
             "tab",
